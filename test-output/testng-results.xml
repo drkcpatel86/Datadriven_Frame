@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="8" passed="1" failed="5" skipped="2">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2018-11-01T01:47:38Z" name="SuiteName" finished-at="2018-11-01T01:48:37Z" duration-ms="58869">
+    <groups>
+    </groups>
+    <test started-at="2018-11-01T01:47:38Z" name="TestA" finished-at="2018-11-01T01:47:39Z" duration-ms="726">
+      <class name="com.datadriven.frame.testcases.DummyTestA">
+        <test-method signature="testA1()[pri:1, instance:com.datadriven.frame.testcases.DummyTestA@57a78e3]" started-at="2018-10-31T20:47:38Z" name="testA1" finished-at="2018-10-31T20:47:38Z" duration-ms="16" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.fail(Assert.java:101)
+	at com.datadriven.frame.testcases.DummyTestA.testA1(DummyTestA.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:393)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testA1 -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:com.datadriven.frame.testcases.DummyTestA@57a78e3]" started-at="2018-10-31T20:47:38Z" name="quit" finished-at="2018-10-31T20:47:39Z" duration-ms="687" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method signature="testA3()[pri:3, instance:com.datadriven.frame.testcases.DummyTestA@57a78e3]" started-at="2018-10-31T20:47:39Z" name="testA3" finished-at="2018-10-31T20:47:39Z" depends-on-methods="com.datadriven.frame.testcases.DummyTestA.testA2, com.datadriven.frame.testcases.DummyTestA.testA1" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method DummyTestA.testA3()[pri:3, instance:com.datadriven.frame.testcases.DummyTestA@57a78e3] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method DummyTestA.testA3()[pri:3, instance:com.datadriven.frame.testcases.DummyTestA@57a78e3] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1033)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:393)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testA3 -->
+        <test-method signature="testA2()[pri:2, instance:com.datadriven.frame.testcases.DummyTestA@57a78e3]" started-at="2018-10-31T20:47:39Z" name="testA2" finished-at="2018-10-31T20:47:39Z" depends-on-methods="com.datadriven.frame.testcases.DummyTestA.testA1" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method DummyTestA.testA2()[pri:2, instance:com.datadriven.frame.testcases.DummyTestA@57a78e3] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method DummyTestA.testA2()[pri:2, instance:com.datadriven.frame.testcases.DummyTestA@57a78e3] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1033)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:393)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testA2 -->
+      </class> <!-- com.datadriven.frame.testcases.DummyTestA -->
+    </test> <!-- TestA -->
+    <test started-at="2018-11-01T01:47:38Z" name="TestC" finished-at="2018-11-01T01:47:47Z" duration-ms="8497">
+      <class name="com.datadriven.frame.testcases.DummyTestC">
+        <test-method signature="TestC(java.util.Hashtable)[pri:0, instance:com.datadriven.frame.testcases.DummyTestC@433defed]" started-at="2018-10-31T20:47:40Z" name="TestC" data-provider="getData" finished-at="2018-10-31T20:47:45Z" duration-ms="5577" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Col4=ok, Col3=A3, Col2=A2, Runmode=Y, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestC -->
+        <test-method signature="TestC(java.util.Hashtable)[pri:0, instance:com.datadriven.frame.testcases.DummyTestC@433defed]" started-at="2018-10-31T20:47:40Z" name="TestC" data-provider="getData" finished-at="2018-10-31T20:47:40Z" duration-ms="3" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Col4=MJ, Col3=A6, Col2=A5, Runmode=N, Browser=A4}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.datadriven.frame.base.BaseTest.openBrowser(BaseTest.java:122)
+	at com.datadriven.frame.testcases.DummyTestC.TestC(DummyTestC.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:75)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestC -->
+        <test-method signature="TestC(java.util.Hashtable)[pri:0, instance:com.datadriven.frame.testcases.DummyTestC@433defed]" started-at="2018-10-31T20:47:40Z" name="TestC" data-provider="getData" finished-at="2018-10-31T20:47:40Z" duration-ms="1" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Col4=SH, Col3=A10, Col2=A7, Runmode=Y, Browser=A8}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.datadriven.frame.base.BaseTest.openBrowser(BaseTest.java:122)
+	at com.datadriven.frame.testcases.DummyTestC.TestC(DummyTestC.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:75)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestC -->
+        <test-method signature="TestC(java.util.Hashtable)[pri:0, instance:com.datadriven.frame.testcases.DummyTestC@433defed]" started-at="2018-10-31T20:47:40Z" name="TestC" data-provider="getData" finished-at="2018-10-31T20:47:40Z" duration-ms="3" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Col4=SH, Col3=A9, Col2=A8, Runmode=Y, Browser=A7}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.datadriven.frame.base.BaseTest.openBrowser(BaseTest.java:122)
+	at com.datadriven.frame.testcases.DummyTestC.TestC(DummyTestC.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:75)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestC -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:com.datadriven.frame.testcases.DummyTestC@433defed]" started-at="2018-10-31T20:47:40Z" name="quit" finished-at="2018-10-31T20:47:40Z" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:com.datadriven.frame.testcases.DummyTestC@433defed]" started-at="2018-10-31T20:47:40Z" name="quit" finished-at="2018-10-31T20:47:40Z" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:com.datadriven.frame.testcases.DummyTestC@433defed]" started-at="2018-10-31T20:47:40Z" name="quit" finished-at="2018-10-31T20:47:40Z" duration-ms="174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:com.datadriven.frame.testcases.DummyTestC@433defed]" started-at="2018-10-31T20:47:45Z" name="quit" finished-at="2018-10-31T20:47:47Z" duration-ms="1499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.datadriven.frame.testcases.DummyTestC -->
+    </test> <!-- TestC -->
+    <test started-at="2018-11-01T01:47:38Z" name="TestB" finished-at="2018-11-01T01:48:37Z" duration-ms="58869">
+      <class name="com.datadriven.frame.testcases.DummyTestB">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@302c971f]" started-at="2018-10-31T20:47:40Z" name="init" finished-at="2018-10-31T20:47:40Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="testB(java.util.Hashtable)[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@302c971f]" started-at="2018-10-31T20:47:40Z" name="testB" data-provider="getData" finished-at="2018-10-31T20:48:36Z" duration-ms="56445" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Username=A2, Password=A3, Runmode=Y, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test Failed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test Failed
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.datadriven.frame.base.BaseTest.reportFailure(BaseTest.java:218)
+	at com.datadriven.frame.testcases.DummyTestB.testB(DummyTestB.java:105)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:75)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testB -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@302c971f]" started-at="2018-10-31T20:48:36Z" name="quit" finished-at="2018-10-31T20:48:37Z" duration-ms="1002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.datadriven.frame.testcases.DummyTestB -->
+    </test> <!-- TestB -->
+  </suite> <!-- SuiteName -->
+</testng-results>
