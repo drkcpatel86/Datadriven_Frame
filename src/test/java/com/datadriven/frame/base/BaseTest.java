@@ -130,7 +130,7 @@ public class BaseTest {
 	public void navigate(String urlKey){
 		test.log(LogStatus.INFO, "Navigating to "+prop.getProperty(urlKey) );
 		System.out.println(envProp.getProperty(urlKey));	
-	driver.get(envProp.getProperty(urlKey));
+		driver.get(envProp.getProperty(urlKey));
 	}
 	
 	public void click(String locatorKey) {
@@ -235,6 +235,14 @@ public void takeScreenShot(){
 	test.log(LogStatus.INFO,"Screenshot-> "+ test.addScreenCapture(System.getProperty("user.dir")+"//screenshots//"+screenshotFile));
 	
 }
+public void MoveToDefault(){
+	driver.switchTo().defaultContent();
+}
+
+public void FrameIndex(int Number){
+	driver.switchTo().frame(Number);
+}
+
 public void wait(int timeToWaitInSec){
 	try {
 		Thread.sleep(timeToWaitInSec * 1000);
@@ -262,11 +270,11 @@ public boolean doLogin(String username,String password)  {
 //	click("loginLink_xpath");
 
 	type("email_xpath",username);
-	wait(5);
+	wait(2);
 	click("username_next_xpath");
-	wait(5);
+	wait(2);
 	type("password_signin_xpath",password);
-	wait(3);
+	wait(2);
 	
 	click("password_next_xpath");
 	click("No_User_Pass_Save_xpath");

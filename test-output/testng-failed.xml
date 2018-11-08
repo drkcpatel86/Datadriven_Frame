@@ -1,69 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [SuiteName]" guice-stage="DEVELOPMENT">
-  <test parallel="tests" name="TestA(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.datadriven.frame.testcases.DummyTestC">
+      <class name="HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales">
         <methods>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- com.datadriven.frame.testcases.DummyTestC -->
-      <class name="com.datadriven.frame.testcases.DummyTestA">
-        <methods>
-          <include name="testA1"/>
-          <include name="quit"/>
-          <include name="testA3"/>
-          <include name="testA2"/>
-        </methods>
-      </class> <!-- com.datadriven.frame.testcases.DummyTestA -->
-      <class name="com.datadriven.frame.testcases.DummyTestB">
-        <methods>
-          <include name="quit"/>
           <include name="init"/>
+          <include name="TestB" invocation-numbers="0"/>
+          <include name="quit"/>
         </methods>
-      </class> <!-- com.datadriven.frame.testcases.DummyTestB -->
+      </class> <!-- HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales -->
     </classes>
-  </test> <!-- TestA(failed) -->
-  <test parallel="tests" name="TestC(failed)">
-    <classes>
-      <class name="com.datadriven.frame.testcases.DummyTestC">
-        <methods>
-          <include name="TestC" invocation-numbers="3 1 2"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- com.datadriven.frame.testcases.DummyTestC -->
-      <class name="com.datadriven.frame.testcases.DummyTestA">
-        <methods>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- com.datadriven.frame.testcases.DummyTestA -->
-      <class name="com.datadriven.frame.testcases.DummyTestB">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.datadriven.frame.testcases.DummyTestB -->
-    </classes>
-  </test> <!-- TestC(failed) -->
-  <test parallel="tests" name="TestB(failed)">
-    <classes>
-      <class name="com.datadriven.frame.testcases.DummyTestC">
-        <methods>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- com.datadriven.frame.testcases.DummyTestC -->
-      <class name="com.datadriven.frame.testcases.DummyTestA">
-        <methods>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- com.datadriven.frame.testcases.DummyTestA -->
-      <class name="com.datadriven.frame.testcases.DummyTestB">
-        <methods>
-          <include name="quit"/>
-          <include name="init"/>
-          <include name="testB" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.datadriven.frame.testcases.DummyTestB -->
-    </classes>
-  </test> <!-- TestB(failed) -->
-</suite> <!-- Failed suite [SuiteName] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.datadriven.frame.testcases.DummyTestB">
+      <class name="HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales">
         <methods>
-          <include name="quit"/>
           <include name="init"/>
-          <include name="testB" invocation-numbers="0"/>
+          <include name="TestB" invocation-numbers="0"/>
+          <include name="quit"/>
         </methods>
-      </class> <!-- com.datadriven.frame.testcases.DummyTestB -->
+      </class> <!-- HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
