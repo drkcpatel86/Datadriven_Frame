@@ -6,6 +6,7 @@ import java.util.Hashtable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -41,7 +42,8 @@ public class DummyTestB extends BaseTest{
 			}
 			test.log(LogStatus.INFO, data.toString());
 		//	openBrowser("Chrome");
-			openBrowser(data.get("Browser"));
+		//	openBrowser(data.get("Browser"));
+			
 			
 			test.log(LogStatus.INFO, "Open the browser ");
 	/*	System.setProperty("webdriver.chrome.driver",  "C:\\chromedriver.exe");
@@ -49,14 +51,20 @@ public class DummyTestB extends BaseTest{
 		
 //		openWeb("app1url");
 		//driver.get("http://www.yahoo.com"); 
-
+	System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
+	WebDriver driver = new FirefoxDriver();   
+	driver.get("http://www.yahoo.com"); 
 		
 		navigate("app1url");
 	//	Global_Functions.dologin();
+		test.log(LogStatus.FAIL, "Test B Passed");
 	
+		
+		
 		doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
-		
-		
+		test.log(LogStatus.PASS, "Test B Passed");
+		String check = driver.findElement(By.xpath("//*[@id='TabSFA-main']/a")).getText();
+		System.out.println(check+"Bhikhu is fine");
 	
 	/*	String kp = driver.findElement(By.xpath("//*[@id='i0116']")).getText();
 		System.out.println(kp);
@@ -85,8 +93,8 @@ public class DummyTestB extends BaseTest{
 				reportFailure("Sales is not matching by Dr Patel"); */
 		
 			
-			String check = driver.findElement(By.xpath("//*[@id='TabSFA-main']/a")).getText();
-			System.out.println(check);
+			String check2 = driver.findElement(By.xpath("//*[@id='TabSFA-main']/a")).getText();
+			System.out.println(check2);
 			
 			softAssert.assertTrue(verifyText("Sales_xpath","Sales_Text_xpath"), "Text did not match");
 			
@@ -102,13 +110,41 @@ public class DummyTestB extends BaseTest{
 		//	softAssert.assertTrue(false, "Err 4");
 			
 			test.log(LogStatus.PASS, "Test B Passed");
-			reportFailure("Test Failed");
+		//	reportFailure("Test Failed");
 		
 			verifyTitle();
-
-		
-		
 	}
+			@Test(priority=2)
+			public void Validate_NavToSelectedResource_Name_Displayed(){
+				softAssert = new SoftAssert();
+				test= rep.startTest("DummyTestB");
+				
+				test.log(LogStatus.INFO, "Starting the Validate_NavToSelectedResource_Name_Displayed");
+			  //  driver.switchTo().frame(0);
+			//	Global_Functions.SmartFrames();
+				test.log(LogStatus.INFO, "looking element on Grid Table");
+				String Name=driver.findElement(By.id("gridBodyTable_primaryField_{C3DDD977-0CC3-E711-A952-000D3A1A9FA9}_3")).getText();
+				test.log(LogStatus.INFO, "found element on Grid Table");
+				System.out.println(Name);
+				wait(3);
+				driver.findElement(By.id("gridBodyTable_primaryField_{C3DDD977-0CC3-E711-A952-000D3A1A9FA9}_3")).click();
+				wait(1);
+				driver.switchTo().defaultContent();
+
+				int total = driver.findElements(By.tagName("iframe")).size();
+				System.out.println("Total frames - "+ total);
+
+				String General = driver.findElement(By.linkText(Name)).getText();
+				System.out.println(General);
+//			assertEquals(General, Name);
+				//assertTrue(General.equals(Name));
+				
+				
+			}
+			
+		
+		
+	
 
 	@BeforeMethod
 	public void init() {

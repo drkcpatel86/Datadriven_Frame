@@ -5,8 +5,10 @@ import java.util.Hashtable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -29,7 +31,7 @@ public class Access_Project_Projectlist_Sales extends BaseTest {
 	
 	
 	@Test(priority=1,dataProvider="getData")
-	public void TestB(Hashtable<String,String> data1) throws IOException {
+	public void Access_Project_Projectlist_Sales(Hashtable<String,String> data1) throws IOException {
 		softAssert = new SoftAssert();
 		test= rep.startTest("Access_Project_Projectlist_Sales");
 		test.log(LogStatus.INFO, "Starting the Access_Project_Projectlist_Sales");
@@ -45,57 +47,36 @@ public class Access_Project_Projectlist_Sales extends BaseTest {
 			navigate("app1url");
 			test.log(LogStatus.INFO, "Browser is lauched successfully");
 			
-
-	
 			doLogin(envProp.getProperty("username"), envProp.getProperty("password"));
 			test.log(LogStatus.INFO, "Login Successful");
-	
-		
-			wait(2);
-			MoveToDefault();
-			wait(2);
+
+			DefaultLanding();
+			wait(3);
 			
 			click("Sales_Dropdown_xpath");
 			test.log(LogStatus.INFO, "User is able to click on Sales");
-			wait(5);
+			wait(4);
 			
 			click("Projects_UnderSales_xpath");
 			wait(1);
-			MoveToDefault();	
+			DefaultLanding();	
 			FrameIndex(0);
 			wait(3);
 			click("Nav_All_Open_Closed_And_xpath");
 			
 			
-			driver.findElement(By.xpath("//*[@id='{4F49784E-7370-4441-B54E-BF7BE616F312}']/a[2]/span/nobr")).click();
-			//	driver.switchTo().frame(2);
-				driver.findElement(By.xpath("//*[@id='gridBodyTable']/tbody/tr[7]/td[2]")).click();
-				
-			//	driver.findElement(By.xpath("//*[@id='gridBodyTable_primaryField_{3AA916E1-7E4D-E811-A960-000D3A1A9EFB}_5']")).click();
-				
-				driver.switchTo().defaultContent();
+			click("ProjectSelect_xpath");
+			wait(3);
+			click("ProjectName_xpath");
+			doubleClick("ProjectName_xpath");
 			
+			DefaultLanding();
+			TotalAvailFrames();
+		//	driver.switchTo().frame(0);
+			SmartFrames(data1.get("Browser")); 
+			IsDisplayed("ProjectSummaryTitle_xpath");
 			
-			
-			softAssert.assertTrue(verifyText("Sales_xpath","Sales_Text_xpath"), "Text did not match");
-			
-			if(!isElementPresent("Sales_xpath"))
-				reportFailure("Sales is not present by please verify Xpath");
-			
-			softAssert.assertTrue(false, "error2CreatedbyKP");
-			softAssert.assertTrue(true, "error3CreatedbyKP");
-			softAssert.assertTrue(false, "error4CreatedbyKP");
-		//	
-		//	softAssert.assertTrue(false, "Err 2");
-		//	softAssert.assertTrue(true, "Err 3");
-		//	softAssert.assertTrue(false, "Err 4");
-			
-			test.log(LogStatus.PASS, "Test B Passed");
-			reportFailure("Test Failed");
-		
-			verifyTitle();
-
-		
+			test.log(LogStatus.PASS, "Test Access_Project_Projectlist_Sales Passed");
 		
 	}
 
@@ -111,8 +92,9 @@ public class Access_Project_Projectlist_Sales extends BaseTest {
 		
 	}
 
-	@AfterMethod
+	@AfterTest
 	public void quit(){
+		signOut();
 		try {
 			softAssert.assertAll();
 		}catch (Error e) {

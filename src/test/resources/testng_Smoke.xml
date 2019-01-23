@@ -1,0 +1,63 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="SuiteName" parallel="tests">
+	
+	
+	<test name="Test1" allow-return-values="true">
+		<classes>
+			<class name="HollandCRM_Prod_Smoke.Access_Project_Projectlist_Sales" />
+		</classes>
+	</test>
+	
+	<test name="Test2" allow-return-values="true">
+		<classes>
+			<class name="HollandCRM_Prod_Smoke.Access_Resource_Resourcelist_Sales" />
+		</classes>
+	</test>
+	
+	<test name="Test3" allow-return-values="true">
+		<classes>
+			<class name="HollandCRM_Prod_Smoke.Access_ResourceBooking_Resource_Sales" />
+		</classes>
+	</test>
+	
+	<test name="Test4" allow-return-values="true">
+		<classes>
+			<class name="HollandCRM_Prod_Smoke.Access_ResourceRequirement_Resource_Sales" />
+		</classes>
+	</test>
+	
+			<test name="Test5" allow-return-values="true">
+		<classes>
+			<class name="HollandCRM_Prod_Smoke.Access_ResourceRoles_Resourcelist_Sales" />
+		</classes>
+	</test>
+	
+	
+		<test name="Test6" allow-return-values="true">
+		<classes>
+			<class name="HollandCRM_Prod_Smoke.Access_ResourceSkill_Resourcelist_Sales" />
+		</classes>
+	</test>
+	
+		<test name="Test7" allow-return-values="true">
+		<classes>
+			<class name="HollandCRM_Prod_Smoke.AccountInformationUnderSales" />
+		</classes>
+	</test>
+	
+	<test name="Test8" allow-return-values="true">
+		<classes>
+			<class name="HollandCRM_Prod_Smoke.ContactContactlistUnderSales" />
+		</classes>
+	</test>
+	
+		<test name="Test9" allow-return-values="true">
+		<classes>
+			<class name="HollandCRM_Prod_Smoke.Validate_OppotunitiesCanbeOpened_UnderSales_Opportunities" />
+		</classes>
+	</test>
+	
+</suite>
+

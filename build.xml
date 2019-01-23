@@ -87,7 +87,7 @@
     <!-- run -->
     <target name="run" depends="compile">
         <testng classpath="${test.classpath}:${test.dest}" suitename="suite1">	
-            <xmlfileset dir="${ws.home}" includes="src/test/resources/testng.xml"/>
+            <xmlfileset dir="${ws.home}" includes="src/test/resources/testng_Smoke.xml"/>
         </testng>
         <!--
         <testng classpath="${test.classpath}:${test.dest}" groups="fast">
@@ -117,6 +117,6 @@
 	    </target>
 
  <target name="report_email" >
-			       <java classname="com.qtpselenium.zoho.project.util.mail.SendMail"  classpathref="testcase.path" />
+			       <java classname="com.datadriven.frame.util.mail.SendMail"  classpathref="testcase.path" />
 </target>
 </project>

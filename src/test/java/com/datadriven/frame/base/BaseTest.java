@@ -1,5 +1,7 @@
 package com.datadriven.frame.base;
 
+import static org.testng.Assert.fail;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,22 +17,28 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import com.datadriven.frame.util.ExtentManager;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+
+
+
 
 
 public class BaseTest {
@@ -41,11 +49,11 @@ public class BaseTest {
 	public ExtentTest test;
 	public Properties envProp;
 	boolean gridRun=false;
-	
+	 
 	
 	public void init() throws IOException{
 		
-		System.out.println("initialse class called");
+		System.out.println("Intialize class called");
 		if(prop==null){
 		prop= new Properties();
 		envProp=new Properties();
@@ -61,11 +69,22 @@ public class BaseTest {
 		}
 		}}
 
+	/*		if(CONFIG.getProperty("browser").equals("Firefox")){
+		//	System.setProperty("Webdriver.geckodriver","C:\\geckodriver.exe");
+			dr = new FirefoxDriver();
+			 dr.manage().window().maximize();
+			 System.out.println("launching tests in Firefox");
+		}
+		
+		*/
 	
 	public void openBrowser1(String bType){
 	test.log(LogStatus.INFO, "Opening browser "+bType );
-		if(bType.equals("Mozilla"))		
+		if(bType.equals("Mozilla"))	{
+			System.setProperty("Webdriver.gecko.driver","C:\\geckodriver.exe");
 			driver=new FirefoxDriver();
+			
+		}
 		else if(bType.equals("Chrome")){
 			System.setProperty("webdriver.chrome.driver", (System.getProperty("user.dir")+"//chromedriver.exe"));
 			driver=new ChromeDriver();
@@ -82,11 +101,26 @@ public class BaseTest {
 	public void openBrowser(String bType){
 		test.log(LogStatus.INFO, "Opening browser "+bType );
 		if(!gridRun){
-			if(bType.equals("Mozilla"))
-				driver=new FirefoxDriver();
+			if(bType.equals("Mozilla")) {
+				 System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
+
+				 DesiredCapabilities capabilities = new DesiredCapabilities();
+
+				 capabilities = DesiredCapabilities.firefox();
+				 capabilities.setBrowserName("firefox");
+				 capabilities.setVersion("35");
+				 capabilities.setPlatform(Platform.WINDOWS);
+				 capabilities.setCapability("marionette", false);
+
+				 driver = new FirefoxDriver(capabilities);
+
+				// driver.get("https://maps.mapmyindia.com");
+				
+			}
 			else if(bType.equals("Chrome")){
 				System.setProperty("webdriver.chrome.driver", (System.getProperty("user.dir")+"//chromedriver.exe"));
 				driver=new ChromeDriver();
+				//test.log(LogStatus.INFO, bType+" Browser opened successfully ");
 			}
 			else if (bType.equals("IE")){
 				System.setProperty("webdriver.chrome.driver", prop.getProperty("iedriver_exe"));
@@ -128,19 +162,63 @@ public class BaseTest {
 
 	
 	public void navigate(String urlKey){
-		test.log(LogStatus.INFO, "Navigating to "+prop.getProperty(urlKey) );
 		System.out.println(envProp.getProperty(urlKey));	
 		driver.get(envProp.getProperty(urlKey));
+		test.log(LogStatus.INFO, "Application "+envProp.getProperty(urlKey)+" is launched successfully" );
 	}
 	
 	public void click(String locatorKey) {
-		getElement(locatorKey).click();
+		wait(1);
+		if (getElement(locatorKey).isDisplayed()) {
+			test.log(LogStatus.INFO, locatorKey +" is displayed");
+			getElement(locatorKey).click();
+			test.log(LogStatus.INFO, "Clicked successfully on "+locatorKey);
+			}
+			else {
+				test.log(LogStatus.INFO, locatorKey +"is not correct");
+				reportFailure("Please make sure"+locatorKey +" is Clickable or check property of the element" );;
+			}
+		
 	}
 	
-	public void EnterValue(String locatorKey, String data) {
-		getElement(locatorKey).sendKeys(data);
+	public void doubleClick(String locatorKey) {
+		Actions action = new Actions(driver);
+		action.moveToElement(getElement(locatorKey)).doubleClick().build().perform();
+		test.log(LogStatus.INFO, "Doubleclicked successfully on "+locatorKey);
 	}
-	public void type1(String locatorKey,String data){
+	
+	public WebElement getText_byxpath(String locatorKey) {
+		try{
+			return driver.findElement(By.xpath(prop.getProperty(locatorKey)));
+		}catch(Throwable t){
+			// report error
+		return null;
+		}
+		
+	}
+	
+	public WebElement getText_byID(String locatorKey) {
+		try{
+			return driver.findElement(By.id(prop.getProperty(locatorKey)));
+		}catch(Throwable t){
+			// report error
+		return null;
+		}
+		
+	}
+	
+	public void IsDisplayed(String locatorKey) {
+		wait(3);
+		if (getElement(locatorKey).isDisplayed()) {
+			test.log(LogStatus.INFO, locatorKey +" is displayed");; 
+			}
+			else {
+				reportFailure("Please make sure"+locatorKey +" is visible" );;
+			}
+		
+	}
+		
+	public void EnterValue(String locatorKey, String data) {
 		getElement(locatorKey).sendKeys(data);
 	}
 	
@@ -150,8 +228,7 @@ public class BaseTest {
 		test.log(LogStatus.INFO, "Typed successfully in "+locatorKey);
 
 	}
-	// finding element and returning it
-	public WebElement getElement(String locatorKey) {
+	public  WebElement getElement(String locatorKey) {
 		WebElement e=null; 
 		try {
 			if(locatorKey.endsWith("_id"))
@@ -160,14 +237,20 @@ public class BaseTest {
 				e=driver.findElement(By.name(prop.getProperty(locatorKey)));
 			else if(locatorKey.endsWith("_xpath"))
 				e=driver.findElement(By.xpath(prop.getProperty(locatorKey)));
+			else if(locatorKey.endsWith("_linktext"))
+				e=driver.findElement(By.linkText(prop.getProperty(locatorKey)));	
 			else {
+				
 				Assert.fail("Locator is not correct-" + locatorKey);
+				
 			}
 		}catch(Exception ex){
 			// fail the test and report the error
+			
 			reportFailure(ex.getMessage());
 			ex.printStackTrace();
 			Assert.fail("Failed the test - "+ex.getMessage());
+			
 		}
 		return e;
 	}	
@@ -196,6 +279,7 @@ public boolean isElementPresent(String locatorKey){
 		return true;
 }
 
+
 public boolean verifyText(String locatorKey, String expectedTextKey) {
 	String actualText=getElement(locatorKey).getText().trim();
 	String expectedText=prop.getProperty(expectedTextKey);
@@ -205,7 +289,16 @@ public boolean verifyText(String locatorKey, String expectedTextKey) {
 		return false; 
 }
 
-
+public void clickAndWait(String locator_clicked,String locator_pres){
+	test.log(LogStatus.INFO, "Clicking and waiting on - "+locator_clicked);
+	int count=5;
+	for(int i=0;i<count;i++){
+		getElement(locator_clicked).click();
+		wait(2);
+		if(isElementPresent(locator_pres))
+			break;
+	}
+}
 
 /*****************************Reporting********************************/
 public void reportPass(String msg){
@@ -235,13 +328,34 @@ public void takeScreenShot(){
 	test.log(LogStatus.INFO,"Screenshot-> "+ test.addScreenCapture(System.getProperty("user.dir")+"//screenshots//"+screenshotFile));
 	
 }
-public void MoveToDefault(){
+public void DefaultLanding(){
 	driver.switchTo().defaultContent();
 }
 
 public void FrameIndex(int Number){
 	driver.switchTo().frame(Number);
 }
+
+public void TotalAvailFrames() {
+	int total = driver.findElements(By.tagName("iframe")).size();
+	System.out.println("Total frames - "+ total);
+	test.log(LogStatus.INFO, "Total"+total+"Frames available on this page");
+}
+public  void SmartFrames(String bType) {
+		if(bType.equals("Mozilla"))	{
+			wait(2);
+			System.out.println("SmartFrames Identifed for Mozilla");
+			test.log(LogStatus.INFO, "SmartFrames Identifed for Mozilla");
+			driver.switchTo().frame(2);
+		
+		}
+	else if(bType.equals("Chrome")){
+		wait(2);
+		test.log(LogStatus.INFO, "SmartFrames Identifed for Chrome");
+		driver.switchTo().frame(1);
+		System.out.println("SmartFrames Identifed for Chrome");
+	}
+	}
 
 public void wait(int timeToWaitInSec){
 	try {
@@ -250,6 +364,13 @@ public void wait(int timeToWaitInSec){
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+}
+public void acceptAlert(){
+	WebDriverWait wait = new WebDriverWait(driver,5);
+	wait.until(ExpectedConditions.alertIsPresent());
+	test.log(LogStatus.INFO,"Accepting alert");
+	driver.switchTo().alert().accept();
+	driver.switchTo().defaultContent();
 }
 
 public void waitForPageToLoad() throws InterruptedException {
@@ -262,6 +383,8 @@ public void waitForPageToLoad() throws InterruptedException {
 		state = (String)js.executeScript("return document.readyState");
 	}
 }
+
+
 
 /************************App functions****/
 
@@ -278,12 +401,8 @@ public boolean doLogin(String username,String password)  {
 	
 	click("password_next_xpath");
 	click("No_User_Pass_Save_xpath");
-	
-	
-	
-	
-	
-	if(isElementPresent("Sales_Text_xpath")){
+
+	if(isElementPresent("Sales_Dropdown_xpath")){
 		test.log(LogStatus.INFO, "Login Success");
 		return true;
 	}
@@ -294,5 +413,16 @@ public boolean doLogin(String username,String password)  {
 	
 }
 
+public void signOut() {
+	wait(3);
+	DefaultLanding();
+	wait(3);
+	click("Profile_Click_xpath");
+	wait(2);
+	click("SignOut_xpath");
+	System.out.println("User have been signout successfully"); 
+	driver.close();
+	
+}
 
 }

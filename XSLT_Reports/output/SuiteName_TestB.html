@@ -18,7 +18,7 @@
                <b>TestB</b>
             </td>
             <td style="background-color: #FFBBBB; padding: 3px 3px 3px 0;" align="center">
-               <div style="width: 50px;">1</div>
+               <div style="width: 50px;">2</div>
             </td>
             <td style="background-color: lightgreen; padding: 3px 3px 3px 0;" align="center">
                <div style="width: 50px;">0</div>
@@ -27,14 +27,14 @@
                <div style="width: 50px;">0</div>
             </td>
             <td align="center" style="background-color: #eaf0f7; padding: 3px 3px 3px 0;">
-               <div style="width: 50px;">1</div>
+               <div style="width: 50px;">2</div>
             </td>
             <td align="center"
                 style="font-weight: bold; background-color: #eaf0f7; padding: 3px 3px 3px 0;">
                <div style="width: 50px;">0%</div>
             </td>
             <td style="background-color: #eaf0f7; padding: 3px 3px 3px 0;" align="center"
-                nowrap="true">49s
+                nowrap="true">48s
                
             </td>
          </tr>
@@ -92,15 +92,67 @@
             <tr id="com.datadriven.frame.testcases.DummyTestB_testB_byStatus_failed_FAIL1_row"
                 class="testMethodStatusFAIL">
                <td width="100%" class="firstMethodCell">
-                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_testB_byStatus_failed_FAIL1_details')">testB({Username=A2, Password=A3, Runmode=Y, Browser=Chrome})</a>
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_testB_byStatus_failed_FAIL1_details')">testB({Username=A2, Password=A3, Runmode=Y, Browser=Mozilla})</a>
                </td>
-               <td nowrap="true">11:21:50</td>
+               <td nowrap="true">17:38:53</td>
                <td nowrap="true" align="right">47s
                   
                </td>
                <td nowrap="true">
-                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_testB_byStatus_failed_FAIL1_exception')">java.lang.AssertionError: 
-                     Test Failed
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_testB_byStatus_failed_FAIL1_exception')">org.openqa.selenium.WebDriverException: 
+                     Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output
+                     follows: 
+                     om in app-system-defaults
+                     1542670756388	addons.xpi	DEBUG	Existing add-on formautofill@mozilla.org in app-system-defaults
+                     1542670756388	addons.xpi	DEBUG	Existing add-on onboarding@mozilla.org in app-system-defaults
+                     1542670756389	addons.xpi	DEBUG	Existing add-on screenshots@mozilla.org in app-system-defaults
+                     1542670756389	addons.xpi	DEBUG	Existing add-on shield-recipe-client@mozilla.org in app-system-defaults
+                     1542670756390	addons.xpi	DEBUG	Existing add-on webcompat@mozilla.org in app-system-defaults
+                     1542670756392	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+                     1542670756393	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+                     1542670756394	addons.xpi	DEBUG	Existing add-on support@graphon.com in winreg-app-global
+                     1542670756394	addons.xpi	DEBUG	getInstallState changed: false, state: {}
+                     1542670756713	addons.productaddons	INFO	Completed downloading document
+                     1542670756926	addons.productaddons	INFO	downloadXHR File download. status=200
+                     1542670756960	DeferredSave.webext.sc.lz4	DEBUG	Starting write
+                     1542670756974	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\KPatel\AppData\Local\Temp\tmpaddon-d9d6ed
+                     1542670757002	DeferredSave.webext.sc.lz4	DEBUG	Write succeeded
+                     1542670758864	addons.productaddons	INFO	downloadXHR File download. status=200
+                     1542670758877	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\KPatel\AppData\Local\Temp\tmpaddon-de828a
+                     [Child 7408] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                     [Child 7408] WARNING: 1542670779633	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+                     1542670779634	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 65
+                     1542670779634	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 10.12.0
+                     1542670779640	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 0.1
+                     1542670779643	addons.xpi	DEBUG	Calling bootstrap method shutdown on formautofill@mozilla.org version 1.0
+                     1542670779646	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.3
+                     1542670779647	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+                     1542670779647	addons.xpi	DEBUG	Calling bootstrap method shutdown on e10srollout@mozilla.org version 3.00
+                     1542670779648	addons.xpi	DEBUG	Calling bootstrap method shutdown on clicktoplay-rollout@mozilla.org version 1.4
+                     1542670779649	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+                     1542670779649	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 0.0.0
+                     [Parent 7660] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                     [Child 3272] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                     1542670780048	addons.manager	DEBUG	shutdown
+                     1542670780049	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+                     1542670780049	addons.xpi	DEBUG	shutdown
+                     1542670780049	addons.xpi-utils	DEBUG	shutdown
+                     1542670780049	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+                     1542670780050	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+                     1542670780050	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+                     1542670780050	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+                     1542670780050	addons.manager	DEBUG	Calling shutdown blocker for &lt;unnamed-provider&gt;
+                     1542670780061	addons.manager	DEBUG	Async provider shutdown done
+                     *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id:
+                     telemetry_modules_ping
+                     [GPU 9436] WARNING: pip
+                     ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+                     
+                     
+                     Build info: version: '2.52.0', revision: '4c2593c', time: '2016-02-11 19:06:42'
+                     System info: host: 'IS54', ip: '192.168.1.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version:
+                     '10.0.2'
+                     Driver info: driver.version: FirefoxDriver
                      
                   </a>
                    
@@ -115,20 +167,20 @@
                         <b>Name: </b>testB
                      </div>
                      <div>
-                        <b>Signature: </b>testB(java.util.Hashtable)[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@302c971f]
+                        <b>Signature: </b>testB(java.util.Hashtable)[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@548a24a]
                      </div>
                      <div>
                         <b>Parameters: </b>
                         
-                        {Username=A2, Password=A3, Runmode=Y, Browser=Chrome}
+                        {Username=A2, Password=A3, Runmode=Y, Browser=Mozilla}
                         
                         
                      </div>
                      <div>
-                        <b>Start time: </b>11:21:50
+                        <b>Start time: </b>17:38:53
                      </div>
                      <div>
-                        <b>End time: </b>11:22:37
+                        <b>End time: </b>17:39:40
                      </div>
                      <div>
                         <b>Duration: </b>47s
@@ -141,10 +193,68 @@
                <td colspan="4" class="detailsBox">
                   <div id="com.datadriven.frame.testcases.DummyTestB_testB_byStatus_failed_FAIL1_exception"
                        class="testMethodDetails">
-                     <pre style="padding: 5px; margin: 0;">java.lang.AssertionError: Test Failed
-                        	at org.testng.Assert.fail(Assert.java:94)
-                        	at com.datadriven.frame.base.BaseTest.reportFailure(BaseTest.java:218)
-                        	at com.datadriven.frame.testcases.DummyTestB.testB(DummyTestB.java:105)
+                     <pre style="padding: 5px; margin: 0;">org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe)
+                        on port 7055; process output follows: 
+                        om in app-system-defaults
+                        1542670756388	addons.xpi	DEBUG	Existing add-on formautofill@mozilla.org in app-system-defaults
+                        1542670756388	addons.xpi	DEBUG	Existing add-on onboarding@mozilla.org in app-system-defaults
+                        1542670756389	addons.xpi	DEBUG	Existing add-on screenshots@mozilla.org in app-system-defaults
+                        1542670756389	addons.xpi	DEBUG	Existing add-on shield-recipe-client@mozilla.org in app-system-defaults
+                        1542670756390	addons.xpi	DEBUG	Existing add-on webcompat@mozilla.org in app-system-defaults
+                        1542670756392	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+                        1542670756393	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+                        1542670756394	addons.xpi	DEBUG	Existing add-on support@graphon.com in winreg-app-global
+                        1542670756394	addons.xpi	DEBUG	getInstallState changed: false, state: {}
+                        1542670756713	addons.productaddons	INFO	Completed downloading document
+                        1542670756926	addons.productaddons	INFO	downloadXHR File download. status=200
+                        1542670756960	DeferredSave.webext.sc.lz4	DEBUG	Starting write
+                        1542670756974	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\KPatel\AppData\Local\Temp\tmpaddon-d9d6ed
+                        1542670757002	DeferredSave.webext.sc.lz4	DEBUG	Write succeeded
+                        1542670758864	addons.productaddons	INFO	downloadXHR File download. status=200
+                        1542670758877	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\KPatel\AppData\Local\Temp\tmpaddon-de828a
+                        [Child 7408] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                        [Child 7408] WARNING: 1542670779633	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+                        1542670779634	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 65
+                        1542670779634	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 10.12.0
+                        1542670779640	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 0.1
+                        1542670779643	addons.xpi	DEBUG	Calling bootstrap method shutdown on formautofill@mozilla.org version 1.0
+                        1542670779646	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.3
+                        1542670779647	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+                        1542670779647	addons.xpi	DEBUG	Calling bootstrap method shutdown on e10srollout@mozilla.org version 3.00
+                        1542670779648	addons.xpi	DEBUG	Calling bootstrap method shutdown on clicktoplay-rollout@mozilla.org version 1.4
+                        1542670779649	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+                        1542670779649	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 0.0.0
+                        [Parent 7660] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                        [Child 3272] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                        1542670780048	addons.manager	DEBUG	shutdown
+                        1542670780049	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+                        1542670780049	addons.xpi	DEBUG	shutdown
+                        1542670780049	addons.xpi-utils	DEBUG	shutdown
+                        1542670780049	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for &lt;unnamed-provider&gt;
+                        1542670780061	addons.manager	DEBUG	Async provider shutdown done
+                        *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id:
+                        telemetry_modules_ping
+                        [GPU 9436] WARNING: pip
+                        ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+                        
+                        
+                        Build info: version: '2.52.0', revision: '4c2593c', time: '2016-02-11 19:06:42'
+                        System info: host: 'IS54', ip: '192.168.1.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version:
+                        '10.0.2'
+                        Driver info: driver.version: FirefoxDriver
+                        	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:124)
+                        	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+                        	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:119)
+                        	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:218)
+                        	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:211)
+                        	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:207)
+                        	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:120)
+                        	at com.datadriven.frame.base.BaseTest.openBrowser(BaseTest.java:101)
+                        	at com.datadriven.frame.testcases.DummyTestB.testB(DummyTestB.java:45)
                         	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
                         	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
                         	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -160,6 +270,123 @@
                         	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
                         	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
                         	at java.base/java.lang.Thread.run(Thread.java:844)
+                        Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000
+                        ms. Firefox console output:
+                        x@getpocket.com in app-system-defaults
+                        1542670756388	addons.xpi	DEBUG	Existing add-on followonsearch@mozilla.com in app-system-defaults
+                        1542670756388	addons.xpi	DEBUG	Existing add-on formautofill@mozilla.org in app-system-defaults
+                        1542670756388	addons.xpi	DEBUG	Existing add-on onboarding@mozilla.org in app-system-defaults
+                        1542670756389	addons.xpi	DEBUG	Existing add-on screenshots@mozilla.org in app-system-defaults
+                        1542670756389	addons.xpi	DEBUG	Existing add-on shield-recipe-client@mozilla.org in app-system-defaults
+                        1542670756390	addons.xpi	DEBUG	Existing add-on webcompat@mozilla.org in app-system-defaults
+                        1542670756392	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+                        1542670756393	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+                        1542670756394	addons.xpi	DEBUG	Existing add-on support@graphon.com in winreg-app-global
+                        1542670756394	addons.xpi	DEBUG	getInstallState changed: false, state: {}
+                        1542670756713	addons.productaddons	INFO	Completed downloading document
+                        1542670756926	addons.productaddons	INFO	downloadXHR File download. status=200
+                        1542670756960	DeferredSave.webext.sc.lz4	DEBUG	Starting write
+                        1542670756974	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\KPatel\AppData\Local\Temp\tmpaddon-d9d6ed
+                        1542670757002	DeferredSave.webext.sc.lz4	DEBUG	Write succeeded
+                        1542670758864	addons.productaddons	INFO	downloadXHR File download. status=200
+                        1542670758877	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\KPatel\AppData\Local\Temp\tmpaddon-de828a
+                        [Child 7408] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                        [Child 7408] WARNING: 1542670779633	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+                        1542670779634	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 65
+                        1542670779634	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 10.12.0
+                        1542670779640	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 0.1
+                        1542670779643	addons.xpi	DEBUG	Calling bootstrap method shutdown on formautofill@mozilla.org version 1.0
+                        1542670779646	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.3
+                        1542670779647	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+                        1542670779647	addons.xpi	DEBUG	Calling bootstrap method shutdown on e10srollout@mozilla.org version 3.00
+                        1542670779648	addons.xpi	DEBUG	Calling bootstrap method shutdown on clicktoplay-rollout@mozilla.org version 1.4
+                        1542670779649	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+                        1542670779649	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 0.0.0
+                        [Parent 7660] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                        [Child 3272] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                        1542670780048	addons.manager	DEBUG	shutdown
+                        1542670780049	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+                        1542670780049	addons.xpi	DEBUG	shutdown
+                        1542670780049	addons.xpi-utils	DEBUG	shutdown
+                        1542670780049	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for &lt;unnamed-provider&gt;
+                        1542670780061	addons.manager	DEBUG	Async provider shutdown done
+                        *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id:
+                        telemetry_modules_ping
+                        
+                        	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:112)
+                        	... 23 more
+                     </pre>
+                  </div>
+               </td>
+            </tr>
+            <tr id="com.datadriven.frame.testcases.DummyTestB_Validate_NavToSelectedResource_Name_Displayed_byStatus_failed_FAIL2_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_Validate_NavToSelectedResource_Name_Displayed_byStatus_failed_FAIL2_details')">Validate_NavToSelectedResource_Name_Displayed()</a>
+               </td>
+               <td nowrap="true">17:39:41</td>
+               <td nowrap="true" align="right">18 ms
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_Validate_NavToSelectedResource_Name_Displayed_byStatus_failed_FAIL2_exception')">java.lang.NullPointerException: </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.datadriven.frame.testcases.DummyTestB_Validate_NavToSelectedResource_Name_Displayed_byStatus_failed_FAIL2_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>Validate_NavToSelectedResource_Name_Displayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>Validate_NavToSelectedResource_Name_Displayed()[pri:2, instance:com.datadriven.frame.testcases.DummyTestB@548a24a]
+                     </div>
+                     <div>
+                        <b>Start time: </b>17:39:41
+                     </div>
+                     <div>
+                        <b>End time: </b>17:39:41
+                     </div>
+                     <div>
+                        <b>Duration: </b>18 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.datadriven.frame.testcases.DummyTestB_Validate_NavToSelectedResource_Name_Displayed_byStatus_failed_FAIL2_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">java.lang.NullPointerException
+                        	at com.datadriven.frame.testcases.DummyTestB.Validate_NavToSelectedResource_Name_Displayed(DummyTestB.java:127)
+                        	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                        	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+                        	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                        	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+                        	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+                        	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+                        	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+                        	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+                        	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+                        	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+                        	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+                        	at org.testng.TestRunner.run(TestRunner.java:624)
+                        	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+                        	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+                        	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:393)
+                        	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+                        	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+                        	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+                        	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+                        	at java.base/java.lang.Thread.run(Thread.java:844)
                      </pre>
                   </div>
                </td>
@@ -169,7 +396,7 @@
                <td width="100%" class="firstMethodCell">
                   <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_init_byStatus_passed_PASS1_details')">init()</a>
                </td>
-               <td nowrap="true">11:21:50</td>
+               <td nowrap="true">17:38:53</td>
                <td nowrap="true" align="right">0 ms
                   
                </td>
@@ -186,13 +413,13 @@
                         <b>Name: </b>init
                      </div>
                      <div>
-                        <b>Signature: </b>init()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@302c971f]
+                        <b>Signature: </b>init()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@548a24a]
                      </div>
                      <div>
-                        <b>Start time: </b>11:21:50
+                        <b>Start time: </b>17:38:53
                      </div>
                      <div>
-                        <b>End time: </b>11:21:50
+                        <b>End time: </b>17:38:53
                      </div>
                      <div>
                         <b>Duration: </b>0 ms
@@ -207,8 +434,8 @@
                <td width="100%" class="firstMethodCell">
                   <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_quit_byStatus_passed_PASS2_details')">quit()</a>
                </td>
-               <td nowrap="true">11:22:37</td>
-               <td nowrap="true" align="right">894 ms
+               <td nowrap="true">17:39:40</td>
+               <td nowrap="true" align="right">32 ms
                   
                </td>
                <td nowrap="true">
@@ -224,16 +451,92 @@
                         <b>Name: </b>quit
                      </div>
                      <div>
-                        <b>Signature: </b>quit()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@302c971f]
+                        <b>Signature: </b>quit()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@548a24a]
                      </div>
                      <div>
-                        <b>Start time: </b>11:22:37
+                        <b>Start time: </b>17:39:40
                      </div>
                      <div>
-                        <b>End time: </b>11:22:38
+                        <b>End time: </b>17:39:41
                      </div>
                      <div>
-                        <b>Duration: </b>894 ms
+                        <b>Duration: </b>32 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.datadriven.frame.testcases.DummyTestB_init_byStatus_passed_PASS3_row"
+                class="testMethodStatusPASS testMethodStatusCONF">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_init_byStatus_passed_PASS3_details')">init()</a>
+               </td>
+               <td nowrap="true">17:39:41</td>
+               <td nowrap="true" align="right">1 ms
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.datadriven.frame.testcases.DummyTestB_init_byStatus_passed_PASS3_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>init
+                     </div>
+                     <div>
+                        <b>Signature: </b>init()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@548a24a]
+                     </div>
+                     <div>
+                        <b>Start time: </b>17:39:41
+                     </div>
+                     <div>
+                        <b>End time: </b>17:39:41
+                     </div>
+                     <div>
+                        <b>Duration: </b>1 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.datadriven.frame.testcases.DummyTestB_quit_byStatus_passed_PASS4_row"
+                class="testMethodStatusPASS testMethodStatusCONF">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_quit_byStatus_passed_PASS4_details')">quit()</a>
+               </td>
+               <td nowrap="true">17:39:41</td>
+               <td nowrap="true" align="right">27 ms
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.datadriven.frame.testcases.DummyTestB_quit_byStatus_passed_PASS4_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>quit
+                     </div>
+                     <div>
+                        <b>Signature: </b>quit()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@548a24a]
+                     </div>
+                     <div>
+                        <b>Start time: </b>17:39:41
+                     </div>
+                     <div>
+                        <b>End time: </b>17:39:41
+                     </div>
+                     <div>
+                        <b>Duration: </b>27 ms
                         
                      </div>
                   </div>
@@ -255,18 +558,108 @@
                <td nowrap="true">Duration</td>
                <td>Exception</td>
             </tr>
-            <tr id="com.datadriven.frame.testcases.DummyTestB_testB_byClass_FAIL1_row"
+            <tr id="com.datadriven.frame.testcases.DummyTestB_init_byClass_PASS1_row"
+                class="testMethodStatusPASS testMethodStatusCONF">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_init_byClass_PASS1_details')">init()</a>
+               </td>
+               <td nowrap="true">17:38:53</td>
+               <td nowrap="true" align="right">0 ms
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.datadriven.frame.testcases.DummyTestB_init_byClass_PASS1_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>init
+                     </div>
+                     <div>
+                        <b>Signature: </b>init()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@548a24a]
+                     </div>
+                     <div>
+                        <b>Start time: </b>17:38:53
+                     </div>
+                     <div>
+                        <b>End time: </b>17:38:53
+                     </div>
+                     <div>
+                        <b>Duration: </b>0 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.datadriven.frame.testcases.DummyTestB_testB_byClass_FAIL2_row"
                 class="testMethodStatusFAIL">
                <td width="100%" class="firstMethodCell">
-                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_testB_byClass_FAIL1_details')">testB({Username=A2, Password=A3, Runmode=Y, Browser=Chrome})</a>
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_testB_byClass_FAIL2_details')">testB({Username=A2, Password=A3, Runmode=Y, Browser=Mozilla})</a>
                </td>
-               <td nowrap="true">11:21:50</td>
+               <td nowrap="true">17:38:53</td>
                <td nowrap="true" align="right">47s
                   
                </td>
                <td nowrap="true">
-                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_testB_byClass_FAIL1_exception')">java.lang.AssertionError: 
-                     Test Failed
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_testB_byClass_FAIL2_exception')">org.openqa.selenium.WebDriverException: 
+                     Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output
+                     follows: 
+                     om in app-system-defaults
+                     1542670756388	addons.xpi	DEBUG	Existing add-on formautofill@mozilla.org in app-system-defaults
+                     1542670756388	addons.xpi	DEBUG	Existing add-on onboarding@mozilla.org in app-system-defaults
+                     1542670756389	addons.xpi	DEBUG	Existing add-on screenshots@mozilla.org in app-system-defaults
+                     1542670756389	addons.xpi	DEBUG	Existing add-on shield-recipe-client@mozilla.org in app-system-defaults
+                     1542670756390	addons.xpi	DEBUG	Existing add-on webcompat@mozilla.org in app-system-defaults
+                     1542670756392	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+                     1542670756393	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+                     1542670756394	addons.xpi	DEBUG	Existing add-on support@graphon.com in winreg-app-global
+                     1542670756394	addons.xpi	DEBUG	getInstallState changed: false, state: {}
+                     1542670756713	addons.productaddons	INFO	Completed downloading document
+                     1542670756926	addons.productaddons	INFO	downloadXHR File download. status=200
+                     1542670756960	DeferredSave.webext.sc.lz4	DEBUG	Starting write
+                     1542670756974	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\KPatel\AppData\Local\Temp\tmpaddon-d9d6ed
+                     1542670757002	DeferredSave.webext.sc.lz4	DEBUG	Write succeeded
+                     1542670758864	addons.productaddons	INFO	downloadXHR File download. status=200
+                     1542670758877	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\KPatel\AppData\Local\Temp\tmpaddon-de828a
+                     [Child 7408] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                     [Child 7408] WARNING: 1542670779633	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+                     1542670779634	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 65
+                     1542670779634	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 10.12.0
+                     1542670779640	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 0.1
+                     1542670779643	addons.xpi	DEBUG	Calling bootstrap method shutdown on formautofill@mozilla.org version 1.0
+                     1542670779646	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.3
+                     1542670779647	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+                     1542670779647	addons.xpi	DEBUG	Calling bootstrap method shutdown on e10srollout@mozilla.org version 3.00
+                     1542670779648	addons.xpi	DEBUG	Calling bootstrap method shutdown on clicktoplay-rollout@mozilla.org version 1.4
+                     1542670779649	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+                     1542670779649	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 0.0.0
+                     [Parent 7660] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                     [Child 3272] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                     1542670780048	addons.manager	DEBUG	shutdown
+                     1542670780049	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+                     1542670780049	addons.xpi	DEBUG	shutdown
+                     1542670780049	addons.xpi-utils	DEBUG	shutdown
+                     1542670780049	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+                     1542670780050	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+                     1542670780050	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+                     1542670780050	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+                     1542670780050	addons.manager	DEBUG	Calling shutdown blocker for &lt;unnamed-provider&gt;
+                     1542670780061	addons.manager	DEBUG	Async provider shutdown done
+                     *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id:
+                     telemetry_modules_ping
+                     [GPU 9436] WARNING: pip
+                     ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+                     
+                     
+                     Build info: version: '2.52.0', revision: '4c2593c', time: '2016-02-11 19:06:42'
+                     System info: host: 'IS54', ip: '192.168.1.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version:
+                     '10.0.2'
+                     Driver info: driver.version: FirefoxDriver
                      
                   </a>
                    
@@ -275,26 +668,26 @@
             </tr>
             <tr>
                <td colspan="4" class="detailsBox">
-                  <div id="com.datadriven.frame.testcases.DummyTestB_testB_byClass_FAIL1_details"
+                  <div id="com.datadriven.frame.testcases.DummyTestB_testB_byClass_FAIL2_details"
                        class="testMethodDetails">
                      <div>
                         <b>Name: </b>testB
                      </div>
                      <div>
-                        <b>Signature: </b>testB(java.util.Hashtable)[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@302c971f]
+                        <b>Signature: </b>testB(java.util.Hashtable)[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@548a24a]
                      </div>
                      <div>
                         <b>Parameters: </b>
                         
-                        {Username=A2, Password=A3, Runmode=Y, Browser=Chrome}
+                        {Username=A2, Password=A3, Runmode=Y, Browser=Mozilla}
                         
                         
                      </div>
                      <div>
-                        <b>Start time: </b>11:21:50
+                        <b>Start time: </b>17:38:53
                      </div>
                      <div>
-                        <b>End time: </b>11:22:37
+                        <b>End time: </b>17:39:40
                      </div>
                      <div>
                         <b>Duration: </b>47s
@@ -305,12 +698,70 @@
             </tr>
             <tr>
                <td colspan="4" class="detailsBox">
-                  <div id="com.datadriven.frame.testcases.DummyTestB_testB_byClass_FAIL1_exception"
+                  <div id="com.datadriven.frame.testcases.DummyTestB_testB_byClass_FAIL2_exception"
                        class="testMethodDetails">
-                     <pre style="padding: 5px; margin: 0;">java.lang.AssertionError: Test Failed
-                        	at org.testng.Assert.fail(Assert.java:94)
-                        	at com.datadriven.frame.base.BaseTest.reportFailure(BaseTest.java:218)
-                        	at com.datadriven.frame.testcases.DummyTestB.testB(DummyTestB.java:105)
+                     <pre style="padding: 5px; margin: 0;">org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe)
+                        on port 7055; process output follows: 
+                        om in app-system-defaults
+                        1542670756388	addons.xpi	DEBUG	Existing add-on formautofill@mozilla.org in app-system-defaults
+                        1542670756388	addons.xpi	DEBUG	Existing add-on onboarding@mozilla.org in app-system-defaults
+                        1542670756389	addons.xpi	DEBUG	Existing add-on screenshots@mozilla.org in app-system-defaults
+                        1542670756389	addons.xpi	DEBUG	Existing add-on shield-recipe-client@mozilla.org in app-system-defaults
+                        1542670756390	addons.xpi	DEBUG	Existing add-on webcompat@mozilla.org in app-system-defaults
+                        1542670756392	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+                        1542670756393	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+                        1542670756394	addons.xpi	DEBUG	Existing add-on support@graphon.com in winreg-app-global
+                        1542670756394	addons.xpi	DEBUG	getInstallState changed: false, state: {}
+                        1542670756713	addons.productaddons	INFO	Completed downloading document
+                        1542670756926	addons.productaddons	INFO	downloadXHR File download. status=200
+                        1542670756960	DeferredSave.webext.sc.lz4	DEBUG	Starting write
+                        1542670756974	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\KPatel\AppData\Local\Temp\tmpaddon-d9d6ed
+                        1542670757002	DeferredSave.webext.sc.lz4	DEBUG	Write succeeded
+                        1542670758864	addons.productaddons	INFO	downloadXHR File download. status=200
+                        1542670758877	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\KPatel\AppData\Local\Temp\tmpaddon-de828a
+                        [Child 7408] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                        [Child 7408] WARNING: 1542670779633	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+                        1542670779634	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 65
+                        1542670779634	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 10.12.0
+                        1542670779640	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 0.1
+                        1542670779643	addons.xpi	DEBUG	Calling bootstrap method shutdown on formautofill@mozilla.org version 1.0
+                        1542670779646	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.3
+                        1542670779647	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+                        1542670779647	addons.xpi	DEBUG	Calling bootstrap method shutdown on e10srollout@mozilla.org version 3.00
+                        1542670779648	addons.xpi	DEBUG	Calling bootstrap method shutdown on clicktoplay-rollout@mozilla.org version 1.4
+                        1542670779649	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+                        1542670779649	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 0.0.0
+                        [Parent 7660] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                        [Child 3272] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                        1542670780048	addons.manager	DEBUG	shutdown
+                        1542670780049	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+                        1542670780049	addons.xpi	DEBUG	shutdown
+                        1542670780049	addons.xpi-utils	DEBUG	shutdown
+                        1542670780049	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for &lt;unnamed-provider&gt;
+                        1542670780061	addons.manager	DEBUG	Async provider shutdown done
+                        *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id:
+                        telemetry_modules_ping
+                        [GPU 9436] WARNING: pip
+                        ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+                        
+                        
+                        Build info: version: '2.52.0', revision: '4c2593c', time: '2016-02-11 19:06:42'
+                        System info: host: 'IS54', ip: '192.168.1.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version:
+                        '10.0.2'
+                        Driver info: driver.version: FirefoxDriver
+                        	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:124)
+                        	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+                        	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:119)
+                        	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:218)
+                        	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:211)
+                        	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:207)
+                        	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:120)
+                        	at com.datadriven.frame.base.BaseTest.openBrowser(BaseTest.java:101)
+                        	at com.datadriven.frame.testcases.DummyTestB.testB(DummyTestB.java:45)
                         	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
                         	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
                         	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -326,55 +777,66 @@
                         	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
                         	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
                         	at java.base/java.lang.Thread.run(Thread.java:844)
+                        Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000
+                        ms. Firefox console output:
+                        x@getpocket.com in app-system-defaults
+                        1542670756388	addons.xpi	DEBUG	Existing add-on followonsearch@mozilla.com in app-system-defaults
+                        1542670756388	addons.xpi	DEBUG	Existing add-on formautofill@mozilla.org in app-system-defaults
+                        1542670756388	addons.xpi	DEBUG	Existing add-on onboarding@mozilla.org in app-system-defaults
+                        1542670756389	addons.xpi	DEBUG	Existing add-on screenshots@mozilla.org in app-system-defaults
+                        1542670756389	addons.xpi	DEBUG	Existing add-on shield-recipe-client@mozilla.org in app-system-defaults
+                        1542670756390	addons.xpi	DEBUG	Existing add-on webcompat@mozilla.org in app-system-defaults
+                        1542670756392	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+                        1542670756393	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+                        1542670756394	addons.xpi	DEBUG	Existing add-on support@graphon.com in winreg-app-global
+                        1542670756394	addons.xpi	DEBUG	getInstallState changed: false, state: {}
+                        1542670756713	addons.productaddons	INFO	Completed downloading document
+                        1542670756926	addons.productaddons	INFO	downloadXHR File download. status=200
+                        1542670756960	DeferredSave.webext.sc.lz4	DEBUG	Starting write
+                        1542670756974	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\KPatel\AppData\Local\Temp\tmpaddon-d9d6ed
+                        1542670757002	DeferredSave.webext.sc.lz4	DEBUG	Write succeeded
+                        1542670758864	addons.productaddons	INFO	downloadXHR File download. status=200
+                        1542670758877	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\KPatel\AppData\Local\Temp\tmpaddon-de828a
+                        [Child 7408] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                        [Child 7408] WARNING: 1542670779633	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+                        1542670779634	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 65
+                        1542670779634	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 10.12.0
+                        1542670779640	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 0.1
+                        1542670779643	addons.xpi	DEBUG	Calling bootstrap method shutdown on formautofill@mozilla.org version 1.0
+                        1542670779646	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.3
+                        1542670779647	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+                        1542670779647	addons.xpi	DEBUG	Calling bootstrap method shutdown on e10srollout@mozilla.org version 3.00
+                        1542670779648	addons.xpi	DEBUG	Calling bootstrap method shutdown on clicktoplay-rollout@mozilla.org version 1.4
+                        1542670779649	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+                        1542670779649	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 0.0.0
+                        [Parent 7660] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                        [Child 3272] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+                        1542670780048	addons.manager	DEBUG	shutdown
+                        1542670780049	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+                        1542670780049	addons.xpi	DEBUG	shutdown
+                        1542670780049	addons.xpi-utils	DEBUG	shutdown
+                        1542670780049	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+                        1542670780050	addons.manager	DEBUG	Calling shutdown blocker for &lt;unnamed-provider&gt;
+                        1542670780061	addons.manager	DEBUG	Async provider shutdown done
+                        *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id:
+                        telemetry_modules_ping
+                        
+                        	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:112)
+                        	... 23 more
                      </pre>
                   </div>
                </td>
             </tr>
-            <tr id="com.datadriven.frame.testcases.DummyTestB_init_byClass_PASS2_row"
-                class="testMethodStatusPASS testMethodStatusCONF">
-               <td width="100%" class="firstMethodCell">
-                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_init_byClass_PASS2_details')">init()</a>
-               </td>
-               <td nowrap="true">11:21:50</td>
-               <td nowrap="true" align="right">0 ms
-                  
-               </td>
-               <td nowrap="true">
-                   
-                  
-               </td>
-            </tr>
-            <tr>
-               <td colspan="4" class="detailsBox">
-                  <div id="com.datadriven.frame.testcases.DummyTestB_init_byClass_PASS2_details"
-                       class="testMethodDetails">
-                     <div>
-                        <b>Name: </b>init
-                     </div>
-                     <div>
-                        <b>Signature: </b>init()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@302c971f]
-                     </div>
-                     <div>
-                        <b>Start time: </b>11:21:50
-                     </div>
-                     <div>
-                        <b>End time: </b>11:21:50
-                     </div>
-                     <div>
-                        <b>Duration: </b>0 ms
-                        
-                     </div>
-                  </div>
-               </td>
-            </tr>
-            <tr></tr>
             <tr id="com.datadriven.frame.testcases.DummyTestB_quit_byClass_PASS3_row"
                 class="testMethodStatusPASS testMethodStatusCONF">
                <td width="100%" class="firstMethodCell">
                   <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_quit_byClass_PASS3_details')">quit()</a>
                </td>
-               <td nowrap="true">11:22:37</td>
-               <td nowrap="true" align="right">894 ms
+               <td nowrap="true">17:39:40</td>
+               <td nowrap="true" align="right">32 ms
                   
                </td>
                <td nowrap="true">
@@ -390,16 +852,160 @@
                         <b>Name: </b>quit
                      </div>
                      <div>
-                        <b>Signature: </b>quit()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@302c971f]
+                        <b>Signature: </b>quit()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@548a24a]
                      </div>
                      <div>
-                        <b>Start time: </b>11:22:37
+                        <b>Start time: </b>17:39:40
                      </div>
                      <div>
-                        <b>End time: </b>11:22:38
+                        <b>End time: </b>17:39:41
                      </div>
                      <div>
-                        <b>Duration: </b>894 ms
+                        <b>Duration: </b>32 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.datadriven.frame.testcases.DummyTestB_init_byClass_PASS4_row"
+                class="testMethodStatusPASS testMethodStatusCONF">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_init_byClass_PASS4_details')">init()</a>
+               </td>
+               <td nowrap="true">17:39:41</td>
+               <td nowrap="true" align="right">1 ms
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.datadriven.frame.testcases.DummyTestB_init_byClass_PASS4_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>init
+                     </div>
+                     <div>
+                        <b>Signature: </b>init()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@548a24a]
+                     </div>
+                     <div>
+                        <b>Start time: </b>17:39:41
+                     </div>
+                     <div>
+                        <b>End time: </b>17:39:41
+                     </div>
+                     <div>
+                        <b>Duration: </b>1 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.datadriven.frame.testcases.DummyTestB_Validate_NavToSelectedResource_Name_Displayed_byClass_FAIL5_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_Validate_NavToSelectedResource_Name_Displayed_byClass_FAIL5_details')">Validate_NavToSelectedResource_Name_Displayed()</a>
+               </td>
+               <td nowrap="true">17:39:41</td>
+               <td nowrap="true" align="right">18 ms
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_Validate_NavToSelectedResource_Name_Displayed_byClass_FAIL5_exception')">java.lang.NullPointerException: </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.datadriven.frame.testcases.DummyTestB_Validate_NavToSelectedResource_Name_Displayed_byClass_FAIL5_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>Validate_NavToSelectedResource_Name_Displayed
+                     </div>
+                     <div>
+                        <b>Signature: </b>Validate_NavToSelectedResource_Name_Displayed()[pri:2, instance:com.datadriven.frame.testcases.DummyTestB@548a24a]
+                     </div>
+                     <div>
+                        <b>Start time: </b>17:39:41
+                     </div>
+                     <div>
+                        <b>End time: </b>17:39:41
+                     </div>
+                     <div>
+                        <b>Duration: </b>18 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.datadriven.frame.testcases.DummyTestB_Validate_NavToSelectedResource_Name_Displayed_byClass_FAIL5_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">java.lang.NullPointerException
+                        	at com.datadriven.frame.testcases.DummyTestB.Validate_NavToSelectedResource_Name_Displayed(DummyTestB.java:127)
+                        	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                        	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+                        	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                        	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+                        	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+                        	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+                        	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+                        	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+                        	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+                        	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+                        	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+                        	at org.testng.TestRunner.run(TestRunner.java:624)
+                        	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+                        	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+                        	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:393)
+                        	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+                        	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+                        	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+                        	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+                        	at java.base/java.lang.Thread.run(Thread.java:844)
+                     </pre>
+                  </div>
+               </td>
+            </tr>
+            <tr id="com.datadriven.frame.testcases.DummyTestB_quit_byClass_PASS6_row"
+                class="testMethodStatusPASS testMethodStatusCONF">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.datadriven.frame.testcases.DummyTestB_quit_byClass_PASS6_details')">quit()</a>
+               </td>
+               <td nowrap="true">17:39:41</td>
+               <td nowrap="true" align="right">27 ms
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.datadriven.frame.testcases.DummyTestB_quit_byClass_PASS6_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Name: </b>quit
+                     </div>
+                     <div>
+                        <b>Signature: </b>quit()[pri:0, instance:com.datadriven.frame.testcases.DummyTestB@548a24a]
+                     </div>
+                     <div>
+                        <b>Start time: </b>17:39:41
+                     </div>
+                     <div>
+                        <b>End time: </b>17:39:41
+                     </div>
+                     <div>
+                        <b>Duration: </b>27 ms
                         
                      </div>
                   </div>

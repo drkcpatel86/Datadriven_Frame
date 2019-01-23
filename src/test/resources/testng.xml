@@ -1,4 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
 <suite name="SuiteName" parallel="tests">
 	
 	
@@ -19,8 +21,7 @@
 			<class name="com.datadriven.frame.testcases.DummyTestC" />
 		</classes>
 	</test>
-	
-	
+
 	
 	
 </suite>
