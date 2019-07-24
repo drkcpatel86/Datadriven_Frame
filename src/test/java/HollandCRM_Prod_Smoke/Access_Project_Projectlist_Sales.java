@@ -67,8 +67,9 @@ public class Access_Project_Projectlist_Sales extends BaseTest {
 			
 			click("ProjectSelect_xpath");
 			wait(3);
+			//click("ProjectName_xpath");
 			click("ProjectName_xpath");
-			doubleClick("ProjectName_xpath");
+			doubleClick("ProjectNamecheckbox_xpath");
 			
 			DefaultLanding();
 			TotalAvailFrames();
